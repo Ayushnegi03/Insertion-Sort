@@ -1,0 +1,33 @@
+//Insertion sort
+#include<iostream>  
+using namespace std;  
+int main ()  
+{    
+    int Array[10] = { 12,4,3,1,15,7,21,10,2};   
+    cout<<"\nInput list is:\n";
+    for(int i=0;i<10;i++)  
+    {  
+        cout <<Array[i]<<"\t";  
+    }    
+    for(int k=1; k<10; k++)   
+    {  
+        int tmp = Array[k];  
+        int j= k-1;  
+        while(j>=0 && tmp <= Array[j])  
+        {  
+            Array[j+1] = Array[j];   
+            j = j-1;  
+        }  
+        Array[j+1] = tmp;  
+    }  
+    cout<<"\nSorted list is:\n";
+    for(int i=0;i<10;i++)  
+    {  
+        cout <<Array[i]<<"\t";  
+    }  
+}
+//Output-
+//Input liat is:
+//12   4   3   1  15   7   21    10   2     0  
+//Sorted list is:
+//0    1   2   3   4   7   10   12    15    21
